@@ -3,58 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hacker Terminal</title>
-  <style>
-    body {
-      background-color: black;
-      color: #33ff33;
-      font-family: "Courier New", monospace;
-      padding: 20px;
-      overflow: hidden;
-    }
-
-    h1 {
-      animation: blink 1s step-end infinite;
-    }
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-
-    .terminal {
-      white-space: pre-wrap;
-      animation: type 2s steps(40) 1;
-    }
-
-    @keyframes type {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    .cursor {
-      display: inline-block;
-      background-color: #33ff33;
-      width: 10px;
-      height: 20px;
-      animation: blink 1s infinite;
-      vertical-align: bottom;
-    }
-  </style>
+  <title>fishtankyu@github.io</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>root@you:~# <span class="cursor"></span></h1>
+  <canvas id="matrix"></canvas>
+  <audio id="type-sound" src="sound.mp3" preload="auto"></audio>
+
   <div class="terminal">
-Welcome to my Hacker Web Terminal 👾
-
-[+] Accessing secure network...
-[+] Loading payload...
-[+] Running recon on open ports...
-
->> Website by Zeng Yu 🧠
->> GitHub: https://github.com/fishtankyu
->> More coming soon...
+    <pre id="terminal-output"></pre>
+    <div class="input-line"><span class="prompt">fishtankyu@github.io:~$</span><span id="typed"></span><span class="cursor"></span></div>
   </div>
+
+  <script src="matrix.js"></script>
+  <script src="terminal.js"></script>
 </body>
 </html>
