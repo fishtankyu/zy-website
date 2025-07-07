@@ -14,16 +14,27 @@ body {
   line-height: 1.6;
 }
 
+.prompt {
+  color: #33ff33;
+}
+
+.about {
+  color: #00ffff; /* cyan */
+}
+
+.tree {
+  color: #ffff66; /* yellow */
+}
+
 a {
   color: #00ff00;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #00ff00;
   text-decoration: underline;
-}
-
-.prompt {
-  color: #33ff33;
 }
