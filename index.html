@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hacker Terminal</title>
+  <style>
+    body {
+      background-color: black;
+      color: #33ff33;
+      font-family: "Courier New", monospace;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    h1 {
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .terminal {
+      white-space: pre-wrap;
+      animation: type 2s steps(40) 1;
+    }
+
+    @keyframes type {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    .cursor {
+      display: inline-block;
+      background-color: #33ff33;
+      width: 10px;
+      height: 20px;
+      animation: blink 1s infinite;
+      vertical-align: bottom;
+    }
+  </style>
+</head>
+<body>
+  <h1>root@you:~# <span class="cursor"></span></h1>
+  <div class="terminal">
+Welcome to my Hacker Web Terminal 👾
+
+[+] Accessing secure network...
+[+] Loading payload...
+[+] Running recon on open ports...
+
+>> Website by Zeng Yu 🧠
+>> GitHub: https://github.com/fishtankyu
+>> More coming soon...
+  </div>
+</body>
+</html>
