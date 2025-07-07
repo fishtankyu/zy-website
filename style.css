@@ -1,3 +1,13 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  height: 100%;
+  overflow: hidden;
+}
+
 canvas#matrix {
   position: fixed;
   top: 0;
@@ -7,4 +17,51 @@ canvas#matrix {
   height: 100%;
   opacity: 0.2; /* softer */
   pointer-events: none;
+}
+
+
+.terminal {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.prompt {
+  color: #33ff33;
+  margin-right: 5px;
+}
+
+#input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #33ff33;
+  font-family: inherit;
+  font-size: 1em;
+  width: 80%;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1em;
+  background-color: #33ff33;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+a {
+  color: #00ff00;
+  text-decoration: none;
 }
