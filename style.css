@@ -1,0 +1,47 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+  height: 100%;
+}
+
+canvas#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.terminal {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  white-space: pre-wrap;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  color: #33ff33;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background: #33ff33;
+  animation: blink 1s infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
