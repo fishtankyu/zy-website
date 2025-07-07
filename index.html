@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>root@fishtankyu:~#</title>
+  <title>root@fishtankyu:~$</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onclick="focusInput()">
   <canvas id="matrix"></canvas>
 
-  <div class="terminal" onclick="focusInput()">
+  <div class="terminal">
     <div id="terminal-output">
-      <div class="line">root@fishtankyu:~# Welcome to the Hack Terminal</div>
+      <div class="line">root@fishtankyu:~$ Welcome to the Hack Terminal</div>
     </div>
     <div class="line">
-      <span class="prompt">root@fishtankyu:~#</span>
-      <input id="input" autofocus />
+      <span class="prompt">root@fishtankyu:~$</span>
+      <input id="input" autocomplete="off" autofocus />
       <span class="cursor"></span>
     </div>
   </div>
+
+  <audio id="type-sound" src="sound.mp3" preload="auto"></audio>
 
   <script src="matrix.js"></script>
   <script src="terminal-interactive.js"></script>
